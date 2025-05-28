@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bot de Apoyo Emocional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Chat de asistencia o dudas</h2>
+    <p class="alerta">
+      Este bot no sustituye la atención que un profesional puede otorgar.
+      En caso de emergencia, llama al <strong>911 (SAPTEL)</strong>.
+    </p>
+
+    <div id="chat"></div>
+
+    <p id="typing">Bot está escribiendo<span id="dots">.</span></p>
+
+    <label for="input">Escribe tu duda o cómo te sientes:</label>
+    <textarea id="input" placeholder="Cuéntame qué pasa..."></textarea>
+    <button onclick="enviarMensaje()">Enviar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
