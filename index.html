@@ -1,20 +1,78 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bot de Apoyo Emocional</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ChatBot</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Responsive -->
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <style>
+    body {
+      padding-top: 100px;
+      /* Da espacio debajo del navbar fijo */
+    }
+
+    .header_section {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+  </style>
+
 </head>
+
 <body>
+  <!-- Header -->
+  <div class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="logo"><a href="index.html"><img src="images/log.jpeg" alt="logo" /></a></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html">Inicio</a>
+          <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+          <a class="nav-item nav-link" href="informacion.html">Información</a>
+          <a class="nav-item nav-link active" href="bot.html">ChatBot</a>
+        </div>
+      </div>
+      <div class="login_menu">
+        <a href="#"><img src="images/search-icon.png" alt="search" /></a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Chat -->
   <div class="chat-container">
-    <h2>Chat de asistencia o dudas</h2>
+    <h2>AliadaSegura</h2>
     <p class="alerta">
       Este bot no sustituye la atención que un profesional puede otorgar.
       En caso de emergencia, llama al <strong>911 (SAPTEL)</strong>.
     </p>
 
-    <div id="chat"></div>
+    <div id="chat" class="chat-box"></div>
 
     <p id="typing">Bot está escribiendo<span id="dots">.</span></p>
 
@@ -23,6 +81,36 @@
     <button onclick="enviarMensaje()">Enviar</button>
   </div>
 
+
+
+  <!-- Footer -->
+  <div class="footer_section layout_padding">
+    <div class="container">
+      <div class="newsletter_section row">
+        <div class="col-md-6 newsletter_left">
+          <div class="footer_logo"><img src="images/log.jpeg" alt="footer logo" /></div>
+        </div>
+        <div class="col-md-6 newsletter_right">
+          <div class="subscribe_main">
+            <input type="text" class="mail_text" placeholder="© 2025 ProyectiNovtion. Todos los derechos reservados."
+              name="text" readonly />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="follow_text mt-4">Follow Us</h1>
+      <div class="social_icon">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><img src="images/fb-icon.png" alt="fb icon" /></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/twitter-icon.png" alt="twitter icon" /></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/linkedin-icon.png" alt="linkedin icon" /></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/instagram-icon.png" alt="instagram icon" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>

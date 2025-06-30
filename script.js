@@ -10,7 +10,9 @@ function agregarAlChat(remitente, mensaje) {
   const mensajeConFormato = mensaje.replace(/\n/g, "<br>");
 
   // Inserta el mensaje dentro del nuevo elemento HTML
-  nuevoMensaje.innerHTML = `<strong>${remitente}:</strong> ${mensajeConFormato}`;
+  const icono = remitente === "Tú" ? "🧍" : "🤖";
+  nuevoMensaje.innerHTML = `<span class="chat-icon">${icono}</span><div><strong>${remitente}:</strong><br>${mensajeConFormato}</div>`;
+
 
   // Añade el mensaje al final del chat
   chat.appendChild(nuevoMensaje);
@@ -69,5 +71,11 @@ async function enviarMensaje() {
     typing.style.display = "none";
   }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    agregarAlChat("Bot", "¡Hola! Soy tu asistente <strong>AliadaSegura</strong> y estoy aquí para apoyarte. Cuéntame cómo te sientes o qué te preocupa.");
+  }, 500); // Espera 0.5 segundos antes de aparecer
+});
 
 
